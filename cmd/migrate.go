@@ -16,7 +16,7 @@ var migrateCmd = &cobra.Command{
 	Use:   "migrate",
 	Short: "To run database migration",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		config := config.DatbaseConfig()
+		config := config.DatabaseConfig()
 
 		dbConnection := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", config.Username, config.Password, config.Host, config.Port, config.Name)
 		m, err := migrate.New("file://./migrations", dbConnection)

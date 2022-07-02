@@ -32,7 +32,7 @@ func Config() *main {
 	return mainConfig
 }
 
-func DatbaseConfig() database {
+func DatabaseConfig() database {
 	return mainConfig.Database
 }
 
