@@ -4,7 +4,7 @@ VERSION=$(shell cat VERSION)
 build:
 	go build -o bin/go-rest-api main.go
 
-run:
+run: build
 	./bin/go-rest-api serve
 
 compose-recreate:
